@@ -19,6 +19,7 @@ const photos = [
   {
     image: "/photos/photo-4.jpg",
     caption: "A memory worth keeping.",
+    position: "object-[center_15%]",
   },
   {
     image: "/photos/photo-5.jpg",
@@ -105,7 +106,10 @@ const PhotoScreen = ({ onNext }) => {
               <img
                 src={current.image}
                 alt={current.caption}
-                className="h-[42vh] w-[72vw] max-w-sm rounded-md object-cover sm:h-107.5 sm:w-107.5"
+                // className="h-[42vh] w-[72vw] max-w-sm rounded-md object-cover sm:h-107.5 sm:w-107.5"
+                className={`h-[42vh] w-[72vw] max-w-sm rounded-md object-cover sm:h-107.5 sm:w-107.5 ${
+                  current.position || "object-center"
+                }`}
               />
 
               <div className="absolute bottom-3 left-0 right-0 text-center">
